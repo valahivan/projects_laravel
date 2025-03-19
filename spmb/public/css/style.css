@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-utama{
+    color: #0d83fd;
+}
+
+.hero-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.card-header{
+    color: #313131;
+    background-color: #f4f4f4;
+    border-bottom: 0.8px solid #b3b3b3;
+    font-size: 18px;
+}
+
+.bg-subtle{
+    background-color: #eff5fd;
+}
+
+.form-action{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.body-form{
+    background-image: url('../image/smk.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fasilitas .service-box{
+    text-align: center;
+    height: 500px;
+}
+
+#fasilitas .blue{
+    border-bottom: 4px solid #0d83fd;
+}
+
+#fasilitas .orange{
+    border-bottom: 4px solid #ff7f00;
+}
+
+#fasilitas .green{
+    border-bottom: 4px solid #00ff00;
+}
+
+
+#fasilitas .icon{
+    font-size: 40px;
+    margin-bottom: 18px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icon-blue{
+    background: rgba(0, 123, 255, 0.3);
+    color: #0d83fd;
+}
+
+.icon-orange{
+    background: rgba(255, 127, 0, 0.3);
+    color: #ff7f00;
+}
+
+.icon-green{
+    background: rgba(0, 255, 0, 0.3);
+    color: #00ff00;
+}
+
+.read-more-blue{
+    color: #0d83fd;
+}
+
+.read-more-orange{
+    color: #ff7f00;
+}
+
+.read-more-green{
+    color: #00ff00;
+}
+
+#kontak .contact-content{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#kontak .contact-content .card-box{
+    background-color: #f0f7fe;
+}
+
+.footer .social-links{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.footer .footer-newsletter{
+    background-color: #eff5fd;
+    padding: 30px;
+}
+
+.footer .footer-top{
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .7)), url(../image/istockphoto-507573090-612x612.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media (max-width: 768px){
+    .hero-buttons{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .card-header{
+        font-size: 16px;
+    }
+    .program{
+        margin-top: 90px;
+    }
+    
+}
