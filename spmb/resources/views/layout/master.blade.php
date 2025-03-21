@@ -11,15 +11,15 @@
   <link href="{{asset('image/logo smk samudra.png')}}" rel="icon">
   <link href="{{asset('iLanding/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
   
-  <link rel="stylesheet" href="{{asset('admin_template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
-  <link rel="stylesheet" href="{{asset('admin_template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('spmb_admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('spmb_admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('admin_template/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('spmb_admin/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('admin_template/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('spmb_admin/dist/css/adminlte.min.css')}}">
   @stack('styles')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -97,11 +97,11 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('admin_template/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('spmb_admin/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('admin_template/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('spmb_admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('admin_template/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('spmb_admin/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 @stack('scripts')
 </body>

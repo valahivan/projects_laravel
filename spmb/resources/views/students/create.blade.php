@@ -13,10 +13,12 @@
     <link href="{{asset('iLanding/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('admin_template/plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('spmb_admin/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('admin_template/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('spmb_admin/dist/css/adminlte.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('spmb_admin/plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('spmb_admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
 </head>
 <body class="body-form">
     <div class="container container-form px-4">
@@ -44,63 +46,63 @@
             <form action="/students" method="post">
                 @csrf
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="NAMA LENGKAP" autocomplete="off" required>
+                    <input type="text" name="name" class="form-control" placeholder="NAMA LENGKAP" autocomplete="off" required>
                     <div class="input-group-append">
                         <span class="input-group-text bg-white"><i class="fas fa-user"></i></span>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="place_birth" placeholder="TEMPAT LAHIR (Contoh: SUKABUMI, dll)" autocomplete="off" required>
+                    <input type="text" name="place_birth" class="form-control" placeholder="TEMPAT LAHIR (Contoh : Sukabumi)" autocomplete="off" required>
                     <div class="input-group-append">
                         <span class="input-group-text bg-white"><i class="fas fa-home"></i></span>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="date_birth" placeholder="TGL LAHIR (Contoh: 06/11/2007)" autocomplete="off" required>
+                    <input type="text" name="date_birth" class="form-control" placeholder="TANGGAL LAHIR (Contoh : 06112007)" autocomplete="off" required>
                     <div class="input-group-append">
                         <span class="input-group-text bg-white"><i class="fas fa-calendar"></i></span>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <select name="gender" class="form-control" required>
-                        <option value="" selected>JENIS KELAMIN</option>
-                        <option value="Laki-Laki">LAKI-LAKI</option>
-                        <option value="Perempuan">PEREMPUAN</option>
+                    <select name="gender" class="form-control select2bs4" required>
+                      <option value="" selected="selected">JENIS KELAMIN</option>
+                      <option value="Laki-Laki">LAKI-LAKI</option>
+                      <option value="Perempuan">PEREMPUAN</option>
                     </select>
                     <div class="input-group-append">
                         <span class="input-group-text bg-white"><i class="fas fa-user"></i></span>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <select name="school_id" class="form-control" required>
-                        <option value="" selected>ASAL SEKOLAH</option>
-                        @forelse ($schools as $school)
-                            <option value="{{$school->id}}">{{$school->name}}</option>
-                        @empty
-                            <option value="">Belum Ada Data Sekolah</option>
-                        @endforelse
+                    <select name="school_id" class="form-control select2bs4" required>
+                      <option value="" selected="selected">ASAL SEKOLAH</option>
+                      @forelse ($schools as $school)
+                          <option value="{{$school->id}}">{{$school->name}}</option>
+                      @empty
+                          <option value="">Belum Ada Daftar Sekolah</option>
+                      @endforelse
                     </select>
                     <div class="input-group-append">
                         <span class="input-group-text bg-white"><i class="fas fa-university"></i></span>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <select name="major_id" class="form-control" required>
-                        <option value="" selected>PILIH JURUSAN</option>
-                        @forelse ($majors as $major)
-                            <option value="{{$major->id}}">{{$major->name}}</option>
-                        @empty
-                            <option value="">Belum Ada Data Jurusan</option>
-                        @endforelse
+                    <select name="major_id" class="form-control select2bs4" required>
+                      <option value="" selected="selected">PILIH JURUSAN</option>
+                      @forelse ($majors as $major)
+                          <option value="{{$major->id}}">{{$major->name}}</option>
+                      @empty
+                          <option value="">Belum Ada Daftar Jurusan</option>
+                      @endforelse
                     </select>
                     <div class="input-group-append">
-                        <span class="input-group-text bg-white"><i class="fas fa-university"></i></span>
+                        <span class="input-group-text bg-white"><i class="fas fa-school"></i></span>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" name="no_wa" placeholder="NO HANDPHONE / WA" autocomplete="off" required>
+                    <input type="text" name="no_wa" class="form-control" placeholder="NO HANDPHONE / WA" autocomplete="off" required>
                     <div class="input-group-append">
-                        <span class="input-group-text bg-white"><i class="fas fa-user"></i></span>
+                        <span class="input-group-text bg-white"><i class="fas fa-phone"></i></span>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">DAFTAR SEKARANG</button>
@@ -109,7 +111,15 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="{{asset('admin_template/plugins/sweetalert/sweetalert.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/sweetalert/sweetalert.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/select2/js/select2.full.min.js')}}"></script>
+    <script>
+        $('.select2').select2()
+
+        $('.select2bs4').select2({
+        theme: 'bootstrap4'
+        })
+    </script>
 </body>
 </html>
 @if (session()->has('success'))

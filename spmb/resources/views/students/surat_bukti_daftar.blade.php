@@ -129,7 +129,7 @@
                 <td>{{$data->major}}</td>
             </tr>
             <tr>
-                <td>No. Telepnon</td>
+                <td>No. Telepon</td>
                 <td>:</td>
                 <td>{{$data->no_wa}}</td>
             </tr>

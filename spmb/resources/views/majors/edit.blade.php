@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-    Halaman Tambah Jurusan
+    Halaman Edit Jurusan
 @endsection
 
 @section('content')

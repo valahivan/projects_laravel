@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @push('styles')
-    <link rel="stylesheet" href="{{asset('admin_template/dist/css/manage_css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('spmb_admin/dist/css/manage_css/style.css')}}">
 @endpush
 
 @section('title')
@@ -66,14 +66,14 @@
 @endsection
 
 @push('scripts')
-    <script src="{{asset('admin_template/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin_template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('spmb_admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
 
     <script>
         $(function () {
